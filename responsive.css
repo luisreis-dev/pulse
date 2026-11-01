@@ -376,3 +376,465 @@
         line-height: 1.65;
     }
 }
+
+/* CTA */
+@media (max-width: 768px) {
+    .flavor-cta {
+        min-height: 560px;
+    }
+
+    .flavor-cta-image {
+        object-position: 60% center;
+    }
+
+    .flavor-cta-overlay {
+        background: rgba(22, 22, 22, 0.48);
+    }
+
+    .flavor-cta-content {
+        width: 88%;
+        padding: 80px 0;
+    }
+
+    .flavor-cta-content h2 {
+        font-size: clamp(55px, 11vw, 78px);
+    }
+
+    .flavor-cta-content p {
+        max-width: 520px;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .flavor-cta-button {
+        min-width: 260px;
+        min-height: 70px;
+        margin-top: 35px;
+        padding: 18px 25px;
+        gap: 20px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flavor-cta {
+        min-height: 520px;
+    }
+
+    .flavor-cta-content {
+        width: 90%;
+        padding: 70px 0;
+    }
+
+    .flavor-cta-content h2 {
+        font-size: clamp(48px, 13vw, 62px);
+    }
+
+    .flavor-cta-content p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .flavor-cta-button {
+        min-width: 245px;
+        min-height: 66px;
+        margin-top: 30px;
+        padding: 17px 22px;
+        font-size: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flavor-cta-button {
+        animation: none;
+    }
+}
+
+/* AVALIAÇÕES */
+@media (max-width: 1024px) {
+    .reviews {
+        padding: 90px 6%;
+    }
+
+    .reviews-grid {
+        gap: 25px;
+    }
+
+    .review-card {
+        min-height: 350px;
+        padding: 28px 23px;
+    }
+
+    .review-card p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews {
+        padding: 80px 7%;
+    }
+
+    .reviews-header {
+        margin-bottom: 65px;
+    }
+
+    .reviews-header h2 {
+        font-size: clamp(55px, 11vw, 75px);
+    }
+
+    .reviews-sticker {
+        max-width: 90%;
+        padding: 11px 15px;
+        margin-top: 25px;
+    }
+
+    .reviews-sticker span {
+        font-size: 15px;
+    }
+
+    .reviews-grid {
+        max-width: 440px;
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .review-card {
+        min-height: 280px;
+        padding: 30px;
+    }
+
+    .review-pink {
+        transform: rotate(-3deg);
+    }
+
+    .review-purple {
+        transform: rotate(2deg);
+    }
+
+    .review-orange {
+        transform: rotate(-2deg);
+    }
+
+    .review-card p {
+        font-size: 15px;
+    }
+
+    .reviews-disclaimer {
+        margin-top: 55px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews {
+        padding: 70px 8%;
+    }
+
+    .reviews-header h2 {
+        font-size: 54px;
+    }
+
+    .reviews-sticker span {
+        font-size: 13px;
+    }
+
+    .reviews-grid {
+        gap: 38px;
+    }
+
+    .review-card {
+        min-height: 270px;
+        padding: 26px 23px;
+    }
+
+    .review-stars {
+        font-size: 24px;
+    }
+
+    .review-card p {
+        font-size: 14px;
+    }
+
+    .review-author strong {
+        font-size: 19px;
+    }
+}
+
+@media (hover: none) {
+    .review-card:hover {
+        transform: none;
+        box-shadow: 9px 10px 0 var(--color-ink);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .review-card {
+        transition: none;
+    }
+}
+
+/* FAQ */
+@media (max-width: 1024px) {
+    .faq {
+        padding: 90px 6%;
+    }
+
+    .faq-container {
+        gap: 55px;
+    }
+
+    .faq-heading h2 {
+        font-size: clamp(58px, 7vw, 78px);
+    }
+
+    .faq-question span:first-child {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq {
+        padding: 75px 7%;
+    }
+
+    .faq-container {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .faq-heading {
+        position: static;
+    }
+
+    .faq-label {
+        margin-bottom: 18px;
+    }
+
+    .faq-heading h2 {
+        font-size: clamp(60px, 12vw, 80px);
+    }
+
+    .faq-sticker {
+        margin-top: 25px;
+        font-size: 15px;
+    }
+
+    .faq-question {
+        min-height: 75px;
+        gap: 15px;
+    }
+
+    .faq-question span:first-child {
+        font-size: 15px;
+    }
+
+    .faq-answer p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq {
+        padding: 65px 6%;
+    }
+
+    .faq-container {
+        gap: 45px;
+    }
+
+    .faq-heading h2 {
+        font-size: 59px;
+    }
+
+    .faq-sticker {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .faq-question {
+        min-height: 72px;
+        padding: 18px 0;
+    }
+
+    .faq-question span:first-child {
+        font-size: 14px;
+    }
+
+    .faq-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+    .faq-item.active .faq-answer p {
+        padding-right: 5px;
+        padding-bottom: 20px;
+    }
+}
+
+/* CTA-FINAL */
+@media (max-width: 768px) {
+    .final-cta {
+        min-height: 560px;
+    }
+
+    .final-cta-image {
+        object-position: center;
+    }
+
+    .final-cta-overlay {
+        background: rgba(22, 22, 22, 0.5);
+    }
+
+    .final-cta-content {
+        width: 88%;
+        padding: 80px 0;
+    }
+
+    .final-cta-content h2 {
+        font-size: clamp(55px, 11vw, 78px);
+    }
+
+    .final-cta-content p {
+        max-width: 500px;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .final-cta-button {
+        min-width: 290px;
+        min-height: 70px;
+        margin-top: 35px;
+        padding: 18px 25px;
+        gap: 20px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .final-cta {
+        min-height: 520px;
+    }
+
+    .final-cta-content {
+        width: 90%;
+        padding: 70px 0;
+    }
+
+    .final-cta-content h2 {
+        font-size: clamp(48px, 13vw, 62px);
+    }
+
+    .final-cta-content p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .final-cta-button {
+        min-width: 270px;
+        min-height: 66px;
+        margin-top: 30px;
+        padding: 17px 22px;
+        gap: 17px;
+        font-size: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .final-cta-button {
+        animation: none;
+    }
+}
+
+/* RODAPÉ */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 65px 6% 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1.3fr 0.7fr 0.7fr;
+        gap: 45px 30px;
+    }
+
+    .footer-cta {
+        grid-column: 1 / -1;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 7% 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px 25px;
+        padding-bottom: 55px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-logo {
+        font-size: 115px;
+    }
+
+    .footer-brand p {
+        font-size: 18px;
+    }
+
+    .footer-cta {
+        grid-column: 1 / -1;
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 50px 6% 22px;
+    }
+
+    .footer-main {
+        gap: 40px 18px;
+    }
+
+    .footer-logo {
+        font-size: 100px;
+    }
+
+    .footer-brand p {
+        font-size: 16px;
+    }
+
+    .footer-tagline {
+        font-size: 9px;
+    }
+
+    .footer-navigation h3,
+    .footer-social h3 {
+        font-size: 21px;
+    }
+
+    .footer-navigation a,
+    .footer-social a {
+        font-size: 13px;
+    }
+
+    .footer-cta > a {
+        font-size: 15px;
+    }
+
+    .footer-bottom span {
+        font-size: 9px;
+        line-height: 1.6;
+    }
+}
