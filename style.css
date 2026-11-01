@@ -1,0 +1,506 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-orange: #FB4B19;
+  --color-lime: #F6FE37;
+  --color-pink: #EF2489;
+  --color-purple: #742AD9;
+
+  --color-paper: #FBFAF6;
+  --color-ink: #161616;
+  --color-cream: #F4EAD5;
+  --color-coffee: #56331F;
+
+  --color-muted: #F0EFE7;
+  --color-text-secondary: #4D4D4D;
+  --color-error: #E7000B;
+  --color-white: #FFFFFF;
+
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+h1,
+h2,
+h3,
+h4,
+.display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* NAVEGAÇÃO */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-container {
+    width: 100%;
+    min-height: 88px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-family: var(--font-display);
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+.nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 24px;
+    background-color: var(--color-lime);
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+    transform: translateY(-3px);
+}
+
+.navbar.scrolled {
+    background-color: var(--color-lime);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar.scrolled .nav-logo,
+.navbar.scrolled .nav-links a {
+    color: var(--color-ink);
+}
+
+.navbar.scrolled .nav-button {
+    background-color: var(--color-ink);
+    color: var(--color-lime);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 750px;
+    height: 100vh;
+    max-height: 950px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--color-ink);
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        90deg,
+        rgba(22, 22, 22, 0.78) 0%,
+        rgba(22, 22, 22, 0.55) 35%,
+        rgba(22, 22, 22, 0.12) 75%,
+        rgba(22, 22, 22, 0) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 48%;
+    max-width: 650px;
+    margin-left: 8%;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    color: var(--color-white);
+}
+
+.hero-sticker {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 17px;
+    margin-bottom: 28px;
+    background-color: var(--color-lime);
+    color: var(--color-ink);
+    transform: rotate(-5deg);
+    box-shadow: 6px 7px 0 rgba(0, 0, 0, 0.65);
+}
+
+.hero-sticker span {
+    font-family: var(--font-display);
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    max-width: 550px;
+    font-family: var(--font-display);
+    font-size: clamp(52px, 6vw, 88px);
+    line-height: 0.98;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    text-shadow: 0 4px 22px rgba(0, 0, 0, 0.45);
+}
+
+.hero-content p {
+    max-width: 490px;
+    margin-top: 25px;
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.65;
+    color: var(--color-white);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 38px;
+    padding: 15px 20px;
+    background-color: var(--color-lime);
+    color: var(--color-ink);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 19px;
+    text-transform: uppercase;
+    transform: rotate(-2deg);
+    box-shadow: 6px 7px 0 rgba(0, 0, 0, 0.65);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 42px;
+    padding: 22px 32px;
+    min-width: 310px;
+    min-height: 76px;
+    background-color: var(--color-lime);
+    color: var(--color-ink);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transform: rotate(-2deg);
+    box-shadow: 8px 9px 0 rgba(0, 0, 0, 0.65);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-button-arrow {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+.hero-button-arrow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 11px;
+    width: 4px;
+    height: 23px;
+    background-color: var(--color-ink);
+}
+
+.hero-button-arrow::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 4px;
+    width: 15px;
+    height: 15px;
+    border-right: 4px solid var(--color-ink);
+    border-bottom: 4px solid var(--color-ink);
+    transform: rotate(45deg);
+}
+
+.hero-button:hover {
+    transform: rotate(0deg) translateY(-4px);
+    box-shadow: 10px 13px 0 rgba(0, 0, 0, 0.65);
+}
+
+.hero-button:hover .hero-button-arrow {
+    transform: translateY(5px);
+}
+
+.hero-button-arrow {
+    transition: transform 0.25s ease;
+}
+
+.hero-button:hover {
+    transform: rotate(0deg) translateY(-3px);
+    box-shadow: 8px 10px 0 rgba(0, 0, 0, 0.65);
+}
+
+.hero-button:hover i {
+    transform: translateY(4px);
+}
+
+/* SABORES */
+.flavors {
+    width: 100%;
+    overflow: hidden;
+}
+
+.flavor-section {
+    position: relative;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 90px 8%;
+    overflow: hidden;
+}
+
+.flavor-section:not(:first-child) {
+    margin-top: -2px;
+}
+
+.flavor-tropical {
+    background-color: var(--color-orange);
+    z-index: 3;
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+    padding-bottom: 120px;
+}
+
+.flavor-pink {
+    background-color: var(--color-pink);
+    z-index: 2;
+    clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+    margin-top: -30px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.flavor-cappuccino {
+    background-color: var(--color-purple);
+    z-index: 1;
+    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -30px;
+    padding-top: 120px;
+}
+
+.flavor-content {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 90px;
+}
+
+.flavor-content.reverse .flavor-info {
+    order: 1;
+}
+
+.flavor-content.reverse .flavor-image {
+    order: 2;
+}
+
+.flavor-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    animation: flavorFloat 4.5s ease-in-out infinite;
+}
+
+.flavor-image img {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    max-height: 500px;
+    object-fit: contain;
+    transform: rotate(-6deg);
+    filter: drop-shadow(12px 14px 0 rgba(0, 0, 0, 0.9));
+}
+
+.flavor-pink .flavor-image img {
+    transform: rotate(6deg);
+}
+
+.flavor-cappuccino .flavor-image img {
+    transform: rotate(-5deg);
+}
+
+.flavor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-ink);
+    opacity: 0;
+    transform: translateX(70px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.flavor-content.reverse .flavor-info {
+    transform: translateX(-70px);
+}
+
+.flavor-section.visible .flavor-info {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.flavor-number {
+    margin-bottom: 15px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.flavor-info h2 {
+    margin: 0 0 25px;
+    font-family: var(--font-display);
+    font-size: clamp(65px, 8vw, 115px);
+    font-weight: 400;
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    overflow-wrap: anywhere;
+}
+
+.flavor-sticker {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 13px 19px;
+    margin-bottom: 28px;
+    background-color: var(--color-lime);
+    color: var(--color-ink);
+    transform: rotate(-3deg);
+    box-shadow: 7px 8px 0 rgba(0, 0, 0, 0.9);
+}
+
+.flavor-pink .flavor-sticker {
+    transform: rotate(2deg);
+}
+
+.flavor-cappuccino .flavor-sticker {
+    transform: rotate(-2deg);
+}
+
+.flavor-sticker strong {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.flavor-info p {
+    max-width: 480px;
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+@keyframes flavorFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-16px);
+    }
+}
